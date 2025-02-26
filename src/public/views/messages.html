@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FTC Scrimmage - Messages</title>
+        <link rel="icon" type="image/png" href="/icons/logo.png"/>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400" rel="stylesheet">
+        <link href="/globals.css" rel="stylesheet">
+        <link href="/messages/messages.css" rel="stylesheet">
+        <link href="/messages/chatWindow.css" rel="stylesheet">
+    </head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-M1T130H4TQ"></script>
+    <script>
+        if (window.location.hostname != 'localhost') {
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-M1T130H4TQ');
+        }
+    </script>
+    <body>
+        <main>
+            <div class="chats column">
+                <div class="chats-header">
+                    <input id="team-number" placeholder="Team Number"></input>
+                    <button id="chat">Chat</button>
+                </div>
+                <div class="divider"></div>
+                <div class="lists column" style="display: none;">
+                    <div class="list column">
+                        <span>Teams</span>
+                        <img id="chats-loading" src="/loading.png"></img>
+                        <div id="teams" class="buttons column"></div>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="list column">
+                        <span>Scrimmages</span>
+                        <img id="chats-loading" src="/loading.png"></img>
+                        <div id="scrimmages" class="buttons column"></div>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="list column">
+                        <span>Events</span>
+                        <img id="chats-loading" src="/loading.png"></img>
+                        <div id="events" class="buttons column"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="chat-window column">
+                <div class="no-chat"></div>
+                <a id="title" class="large title">12649 Code Blooded</a>
+                <div class="divider"></div>
+                <div id="messages" class="chat column">
+                </div>
+                <input id="message" placeholder="Type a message..."></input>
+            </div>
+        </main>
+        <script src="/utils/globals.js"></script>
+        <script src="/components/header/header.js" type="module"></script>
+        <script src="messages.js" type="module"></script>
+    </body>
+</html>

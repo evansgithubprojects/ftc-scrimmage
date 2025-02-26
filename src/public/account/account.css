@@ -1,0 +1,72 @@
+main {
+    padding: 0 20px;
+    padding-top: 10px;
+}
+
+#gallery {
+    margin-top: 10px;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.media {
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    gap: 5px;
+}
+
+.delete {
+    position: absolute;
+    width: 3em;
+    aspect-ratio: 1/1;
+    right: -1.5em;
+    top: -1.5em;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background: none;
+}
+
+.delete > img {
+    width: 100%;
+    object-fit: contain;
+    transition: all 0.3s ease;
+}
+
+.media > button > img:hover {
+    transform: scale(1.1) rotate(10deg);
+}
+
+.media > img,
+.media > video {
+    max-width: 400px;
+}
+
+video {
+    max-height: 500px;
+}
+
+@media (min-width: 768px) {
+    main {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 767px) {
+    .media,
+    main > .sections {
+        width: 100%;
+    }
+
+    #gallery {
+        width: calc(100% - 2em);
+        margin-bottom: 20px;
+    }
+
+    .media > img:not([src="/loading.png"]),
+    .media > video {
+        width: 100%;
+    }
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FTC Scrimmage - Explore</title>
+        <link rel="icon" type="image/png" href="/icons/logo.png"/>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400" rel="stylesheet">
+        <link href="/globals.css" rel="stylesheet">
+        <link href="/explore/explore.css" rel="stylesheet">
+        <script type="module"> 
+            import dateFnsTz from 'https://cdn.jsdelivr.net/npm/date-fns-tz@3.2.0/+esm'
+        </script>
+    </head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-M1T130H4TQ"></script>
+    <script>
+        if (window.location.hostname != 'localhost') {
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-M1T130H4TQ');
+        }
+    </script>
+    <body>
+        <main class="row sections">
+            <div class="column sections">
+                <div class="search">
+                    <input id="search" placeholder="Search for scrimmages & teams" class="ledium"></input>
+                </div>
+                <div class="column">
+                    <img id="loading" src="/loading.png"></img>
+                    <div class="row sections align-start" style="display: none;">
+                        <div class="column">
+                            <span>Scrimmages</span>
+                            <div id="scrimmages" class="column"></div>
+                        </div>
+                        <div class="divider vertical"></div>
+                        <div class="column">
+                            <span>Teams</span>
+                            <div id="teams" class="column"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="column sections">
+                <span class="title large">Leaderboards</span>
+                <div class="row sections">
+                    <div id="opr" class="column sections">
+                        <span class="title">OPR</span>
+                    </div>
+                    <div class="divider vertical"></div>
+                    <div id="matches-played" class="column sections">
+                        <span class="title">Matches Played</span>
+                    </div>
+                    <div class="divider vertical"></div>
+                    <div id="scrimmages-played" class="column sections">
+                        <span class="title">Scrimmages Played</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <script src="/utils/globals.js"></script>
+        <script src="/components/header/header.js" type="module"></script>
+        <script src="explore.js" type="module"></script>
+    </body>
+</html>

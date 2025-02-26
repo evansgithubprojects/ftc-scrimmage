@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FTC Scrimmage - Account</title>
+        <link rel="icon" type="image/png" href="/icons/logo.png"/>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400" rel="stylesheet">
+        <link href="/globals.css" rel="stylesheet">
+        <link href="/account/account.css" rel="stylesheet">
+    </head>
+    <body>
+        <main class="split sections">
+            <div id="sidebar" class="column sections">
+                <span class="ledium title">Account Information</span>
+                <button id="open-profile">View Profile</button>
+                <span class="ledium">Gallery</span>
+                <label class="upload-mask fancy">
+                    <input id="upload" type="file" accept="image/png, image/jpeg, video/mp4, video/quicktime"></input>
+                    <span>Upload Media to Gallery</span>
+                </label>
+            </div>
+            <div class="divider vertical"></div>
+            <div id="email-preferences" class="column sections">
+                <span class="ledium title">Email Preferences</span>
+            </div>
+            <div class="divider vertical"></div>
+            <div class="grow column sections">
+                <span class="large title">Gallery</span>
+                <div id="gallery" class="row wrap">
+                </div>
+            </div>
+        </main>
+        <script src="/utils/globals.js"></script>
+        <script src="/components/header/header.js" type="module"></script>
+        <script src="account.js" type="module"></script>
+    </body>
+</html>

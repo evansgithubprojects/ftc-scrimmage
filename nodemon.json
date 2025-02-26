@@ -1,0 +1,5 @@
+{
+    "ignore": ["src/public"],
+    "ext": "ts,js",
+    "exec": "npx tsx --env-file=.env ./src/server.js"
+}

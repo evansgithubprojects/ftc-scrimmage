@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FTC Scrimmage - Dashboard</title>
+        <link rel="icon" type="image/png" href="/icons/logo.png"/>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400" rel="stylesheet">
+        <link href="/globals.css" rel="stylesheet">
+        <link href="/editScrimmage/editScrimmage.css" rel="stylesheet">
+        <script type="module"> 
+            import dateFnsTz from 'https://cdn.jsdelivr.net/npm/date-fns-tz@3.2.0/+esm'
+        </script>
+    </head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-M1T130H4TQ"></script>
+    <script>
+        if (window.location.hostname != 'localhost') {
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-M1T130H4TQ');
+        }
+    </script>
+    <body>
+        <main>
+            <div class="inner-header">
+                <span id="code" class="ledium"></span>
+                <a id="view-button" class="pop-out"></a>
+            </div>
+            <div class="widgets">
+                <div id="general" class="widget column">
+                    <span class="title large">General</span>
+                    <div class="column sections">
+                        <div class="field horizontal">
+                            <span>Private?</span>
+                            <input id="private" type="checkbox"></input>
+                        </div>
+                        <div class="field column">
+                            <span class="ledium">Title</span>
+                            <input id="title"></input>
+                        </div>
+                        <div class="field column">
+                            <span class="ledium">Date</span>
+                            <input id="date" type="date"></input>
+                        </div>
+                        <div class="field column">
+                            <span class="ledium">Time</span>
+                            <input id="time" type="time"></input>
+                        </div>
+                        <div class="field column">
+                            <span class="ledium">Address</span>
+                            <span>Street</span>
+                            <input id="street"></input>
+                            <span>City</span>
+                            <input id="city"></input>
+                            <span>State/Province</span>
+                            <input id="state"></input>
+                        </div>
+                        <div class="field column">
+                            <span class="ledium">Information</span>
+                            <textarea id="info" type="text"></textarea>
+                        </div>
+                    </div>
+                    <button id="save">Save</button>
+                </div>
+                <div id="participation" class="widget column">
+                    <span class="title large">Participation</span>
+                    <div class="column sections">
+                        <div class="invites column">
+                            <div class="field column">
+                                <span class="ledium">Participants</span>
+                                <div id="participants" class="list column">
+                                    <img src="/loading.png"></img>
+                                </div>
+                            </div>
+                            <div class="divider"></div>
+                            <div class="field column">
+                                <span class="ledium">Declined Invites</span>
+                                <div id="declined" class="list column">
+                                    <img src="/loading.png"></img>
+                                </div>
+                            </div>
+                            <div class="divider"></div>
+                            <div class="field column">
+                                <span class="ledium">Pending Invites</span>
+                                <div id="pending" class="list column">
+                                    <img src="/loading.png"></img>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="invite-form"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <div id="create-overlay" class="overlay">
+            <button id="cancel">Cancel</button>
+        </div>
+        <script src="/utils/globals.js"></script>
+        <script src="/components/header/header.js" type="module"></script>
+        <script src="/editScrimmage/editScrimmage.js" type="module"></script>
+    </body>
+</html>

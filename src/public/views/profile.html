@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FTC Scrimmage</title>
+        <link rel="icon" type="image/png" href="/icons/logo.png"/>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:site_name" content="FTC Scrimmage"></meta>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400" rel="stylesheet">
+        <link href="/globals.css" rel="stylesheet">
+        <link href="/profile/profile.css" rel="stylesheet">
+        <link href="/profile/innerHeader.css" rel="stylesheet">
+        <script type="module"> 
+            import dateFnsTz from 'https://cdn.jsdelivr.net/npm/date-fns-tz@3.2.0/+esm'
+        </script>
+    </head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-M1T130H4TQ"></script>
+    <script>
+        if (window.location.hostname != 'localhost') {
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-M1T130H4TQ');
+        }
+    </script>
+    <body>
+        <main class="column sections">
+            <div class="column sections">
+                <div class="inner-header row float">
+                    <div class="info column">
+                        <div class="full-name column">
+                            <span id="number" class="xl"></span>
+                            <span id="name" class="large"></span>
+                        </div>
+                        <div class="column">
+                            <div class="contacts column">
+                                <div id="email" class="contact">
+                                    <img src="/icons/email.png"></img>
+                                    <a></a>
+                                </div>
+                                <div id="instagram" class="contact">
+                                    <img src="/icons/instagram.png"></img>
+                                    <a target="_blank"></a>
+                                </div>
+                                <div id="scout-link" class="contact">
+                                    <img src="/icons/scout.png"></img>
+                                    <a target="_blank">FTC Scout</a>
+                                </div>
+                            </div>
+                            <button id="dm"></button>
+                        </div>
+                    </div>
+                    <img id="banner" src="/loading.png"></img>
+                </div>
+                <div class="divider"></div>
+                <span id="profile-views"></span>
+                <div id="general" class="row sections">
+                    <div class="section column">
+                        <span class="large">Public Scrimmages</span>
+                        <div id="scrimmage-list" class="list column">
+                        </div>
+                    </div>
+                    <div class="section column">
+                        <span class="large">Participating in</span>
+                        <div id="participation-list" class="list column">
+                        </div>
+                    </div>
+                    <div class="section column">
+                        <span class="large">OPR</span>
+                        <div class="frozen-row sections">
+                            <div class="frozen-row small-gap">
+                                <div class="dot color secondary"></div>
+                                <span>Auto</span>
+                            </div>
+                            <div class="frozen-row small-gap">
+                                <div class="dot color red"></div>
+                                <span>Teleop</span>
+                            </div>
+                            <div class="frozen-row small-gap">
+                                <div class="dot color blue"></div>
+                                <span>Endgame</span>
+                            </div>
+                        </div>
+                        <div id="opr-graph"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-wrapper column sections">
+                <span class="ledium">Gallery</span>
+                <img id="gallery-loading" src="/loading.png"></img>
+                <div id="empty-gallery" class="column sections" style="display: none;">
+                    <span class="dull">Looks a little empty in here...</span>
+                    <img class="empty-gallery" src="/icons/no-media.png"></img>
+                    <span class="dull">This team hasn't uploaded any media yet.</span>
+                </div>
+                <div id="gallery" class="row wrap sections"></div>
+            </div>
+        </main>
+        <script src="/utils/globals.js"></script>
+        <script src="/components/header/header.js" type="module"></script>
+        <script src="profile.js" type="module"></script>
+    </body>
+</html>

@@ -1,0 +1,23 @@
+{
+  "name": "custom-utils",
+  "type": "module",
+  "version": "1.0.0",
+  "devDependencies": {},
+  "exports": {
+    "./strings": "./strings.js",
+    "./stats": "./stats.js",
+    "./eventToChat": "./eventToChat.js",
+    "./scrimmageToChat": "./scrimmageToChat.js",
+    "./validateInteger": "./validateInteger.js",
+    "./validateEmail": "./validateEmail.js",
+    "./generateId": "./generateId.js",
+    "./calculateOPR": "./calculateOPR.js",
+    "./movToMp4": "./movToMp4.js",
+    "./buckets": "./buckets.js",
+    "./getTeamName": "./getTeamName.js",
+    "./updateLeaderboards": "./updateLeaderboards.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

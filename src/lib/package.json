@@ -1,0 +1,17 @@
+{
+  "name": "lib",
+  "type": "module",
+  "version": "1.0.0",
+  "devDependencies": {},
+  "exports": {
+    "./api": "./api/index.js",
+    "./ftc": "./ftc/index.js",
+    "./auth": "./auth/index.js",
+    "./email": "./email/index.js",
+    "./discord": "./discord/index.js",
+    "./models": "./models/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

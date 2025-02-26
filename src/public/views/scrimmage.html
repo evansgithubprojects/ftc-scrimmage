@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FTC Scrimmage</title>
+        <link rel="icon" type="image/png" href="/icons/logo.png"/>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400" rel="stylesheet">
+        <link href="/globals.css" rel="stylesheet">
+        <link href="/scrimmage/scrimmage.css" rel="stylesheet">
+        <link href="/scrimmage/results.css" rel="stylesheet">
+        <script src='https://cdn.jsdelivr.net/npm/date-fns@4.1.0/cdn.min.js'></script>
+        <script src='https://cdn.jsdelivr.net/npm/mathjs@14.0.1/lib/browser/math.min.js'></script>
+    </head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-M1T130H4TQ"></script>
+    <script>
+        if (window.location.hostname != 'localhost') {
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-M1T130H4TQ');
+        }
+    </script>
+    <body>
+        <main>
+            <img src="/loading.png"></img>
+            <div class="inner-header row">
+                <p id="title" class="large title"></p>
+            </div>
+            <div class="share-code">
+                <span id="code"></span>
+                <button id="copy-code">
+                    <img src="/icons/link.png"></img>
+                </button>
+            </div>
+            <div class="row content">
+                <div class="column left-content">
+                    <div class="info section column sections" style="display: none;">
+                        <div class="column">
+                            <span class="ledium">Date</span>
+                            <p id="date"></p>
+                        </div>
+                        <div class="column">
+                            <span class="ledium">Address</span>
+                            <span id="address"></span>
+                        </div>
+                        <div class="column">
+                            <span class="ledium">Info</span>
+                            <p id="info"></p>
+                        </div>
+                    </div>
+                    <button id="action"></button>
+                    <div class="divider"></div>
+                    <div id="participants" class="section column" style="display: none;">
+                        <span class="ledium">Participants/Invitees</span>
+                        <div id="participants-list" class="column"></div>
+                    </div>
+                </div>
+                <div id="results" class="column" style="display: none;">
+                    <span class="large">Results</span>
+                    <div class="row align-start">
+                        <div class="section column">
+                            <p class="ledium">Matches (in Order of Occurrence)</p>
+                            <div id="matches" class="column"></div>
+                        </div>
+                        <div class="divider vertical"></div>
+                        <div class="section column">
+                            <span id="rankings-title" class="ledium">Initial Rankings</span>
+                            <div id="rankings" class="column"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <div id="match-overlay" class="overlay">
+            <button id="close">Close</button>
+        </div>
+        <div id="team-overlay" class="overlay">
+            <div class= "team-details column">
+                <a id="team-name" class="large title" target="_blank"></a>
+                <span class="ledium">OPR</span>
+                <span class="divider"></span>
+                <div class="column">
+                    <div id="total-opr" class="row small-gap max width space-between">
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div id="auto-opr" class="row small-gap max width space-between">
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div id="teleop-opr" class="row small-ga max width space-between">
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div id="endgame-opr" class="row small-gap max width space-between">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+            <button id="close">Close</button>
+        </div>
+        <div id="update-match-overlay" class="overlay">
+            <button id="close">Close</button>
+        </div>
+        <script src="/utils/globals.js"></script>
+        <script src="/components/header/header.js" type="module"></script>
+        <script src="scrimmage.js" type="module"></script>
+    </body>
+</html>

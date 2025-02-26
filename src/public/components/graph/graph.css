@@ -1,0 +1,22 @@
+.graph {
+    background-color: var(--lighter);
+    border-radius: 10px;
+}
+
+.dot {
+    height: 1.5em;
+    aspect-ratio: 1/1;
+    border-radius: 1em;
+}
+
+.dot.secondary {
+    background-color: var(--secondary);
+}
+
+.dot.red {
+    background-color: red;
+}
+
+.dot.blue {
+    background-color: blue;
+}

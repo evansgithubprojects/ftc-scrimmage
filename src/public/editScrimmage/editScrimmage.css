@@ -1,0 +1,159 @@
+main {
+    padding-top: 20px;
+    gap: 10px;
+    width: 100%;
+    justify-content: flex-start;
+}
+
+.inner-header {
+    display: flex;
+    align-items: center;
+}
+
+textarea {
+    width: 100%;
+    height: 100%;
+}
+
+.widgets {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    gap: 20px;
+}
+
+.widget {
+    width: 49%;
+    height: fit-content;
+    gap: 20px;
+    padding: 50px;
+    padding-bottom: 10px;
+    border: 1px solid var(--light);
+    border-radius: 1em;
+    box-shadow: 0px 4px 20px var(--secondary);
+}
+
+.widget > * {
+    width: 100%;
+}
+
+.content {
+    width: 100%;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.field {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+}
+
+.field.horizontal {
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+}
+
+.field > span {
+    width: fit-content;
+}
+
+.field > span.ledium {
+    width: 100%;
+    text-align: left;
+}
+
+.field > input:not([type="checkbox"]) {
+    width: 100%;
+}
+
+.field:has(textarea),
+.field > textarea {
+    flex-grow: 1;
+}
+
+#invite-form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.list {
+    width: 100%;
+    align-items: center;
+    gap: 5px;
+}
+
+.invites {
+    width: 100%;
+    gap: 20px;
+    align-items: center;
+}
+
+.team {
+    width: 100%;
+    padding: 5px;
+    padding-left: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid var(--light);
+    border-radius: 10px;
+    gap: 10px;
+}
+
+.revoke {
+    background-color: #B22222;
+    border: none;
+    color: white;
+}
+
+.revoke:hover {
+    background-color:rgb(188, 57, 57);
+}
+
+#save {
+    width: 90%;
+}
+
+@media (min-width: 768px) {
+    main {
+       max-width: 1200px;
+    }
+}
+
+@media (max-width: 767px) {
+    main {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .inner-header {
+        justify-content: center;
+    }
+
+    .widgets {
+        flex-direction: column;
+    }
+
+    main > * {
+        width: 100%;
+    }
+
+    .widget {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .field > input:not([type="checkbox"]) {
+        width: 100%;
+    }
+
+    .revoke {
+        width: fit-content;
+    }
+}

@@ -1,0 +1,68 @@
+main {
+    padding: 40px;
+}
+
+.menu {
+    align-items: center;
+    border: 1px solid var(--light);
+    height: calc(100% - 40px);
+    border-radius: 10px;
+    padding: 10px;
+    gap: 10px;
+}
+
+.menu > button {
+    width: 100%;
+}
+
+.scrimmages {
+    flex-grow: 1;
+    padding-bottom: 20px;
+}
+
+#scrimmages {
+    width: 1545px;
+    align-items: flex-start;
+    gap: 15px;
+    height: 100%;
+    overflow-y: auto;
+    flex-wrap: wrap;
+}
+
+.scrimmage {
+    align-items: center;
+    gap: 20px;
+    width: 500px;
+    border: 1px solid var(--light);
+    padding: 20px;
+    border-radius: 10px;
+    background-color: var(--bg-color);
+}
+
+.scrimmage > button {
+    width: 100%;
+}
+
+.scrimmage > .open {
+    justify-content: right;
+}
+
+@media (min-width: 768px) {
+    main {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+}
+
+@media (max-width: 767px) {
+    .menu {
+        width: calc(100% - 40px);
+        height: fit-content;
+        margin: 20px;
+        padding: 5px;
+    }
+
+    .scrimmage {
+        width: 100%;
+    }
+}

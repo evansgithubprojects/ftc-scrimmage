@@ -1,0 +1,162 @@
+main {
+    justify-content: flex-start;
+    gap: 40px;
+    padding-top: 20px;
+    width: 100%;
+    max-width: 1600px;
+}
+
+.inner-header {
+    align-items: center;
+    gap: 30px;
+}
+
+.share-code {
+    display: none;
+    gap: 10px;
+    align-items: center;
+}
+
+#copy-code {
+    width: fit-content;
+    padding: 0.25em;
+}
+
+#copy-code > img {
+    height: 1.5em;
+}
+
+.content {
+    width: fit-content;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.left-content {
+    width: 50%;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.content {
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.info,
+#participants {
+    align-items: flex-start;
+}
+
+.info p {
+    padding: 0;
+}
+
+.info > .column > *:first-child {
+    color: var(--secondary);
+}
+
+.info > .column {
+    align-items: flex-start;
+    gap: 5px;
+}
+
+#participants {
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
+#participants-list {
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.participant {
+    display: flex;
+    width: 100%;
+    gap: 5px;
+    border: 1px solid var(--light);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.participant > img {
+    height: 1em;
+}
+
+.participant > a {
+    text-align: left;
+}
+
+.invited {
+    background-color: rgba(0, 255, 0, 0.1);
+    border: 2px solid rgb(0, 200, 0);
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+button.accept,
+button.deny {
+    color: white;
+}
+
+button.accept {
+    background-color: rgba(0, 255, 0, 0.4);
+    border: 2px solid rgb(0, 200, 0);
+}
+
+button.deny {
+    background-color: rgba(255, 0, 0, 0.5);
+    border: 2px solid red;
+}
+
+#action {
+    align-self: center;
+}
+
+#action[register] {
+    width: 100%;
+    background-color: rgb(0, 180, 0);
+    border: 2px solid rgb(0, 150, 0);
+}
+
+#info {
+    width: 60%;
+}
+
+@media (max-width: 767px) {
+    #info {
+        width: 100%;
+    }
+
+    main {
+        gap: 20px;
+        padding: 10px;
+    }
+
+    .content {
+        width: 100%;
+        flex-direction: column;
+        gap: 10px;
+        padding-bottom: 10px;
+        align-items: center;
+    }
+
+    #participants, .info {
+        width: 100%;
+    }
+
+    .content > .column {
+        width: 100%;
+    }
+
+    .inner-header > button {
+        width: 100%;
+    }
+}

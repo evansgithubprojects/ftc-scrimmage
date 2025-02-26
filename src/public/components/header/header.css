@@ -1,0 +1,155 @@
+.header {
+    margin-bottom: -1px;
+    border-bottom: 1px solid var(--light);
+    z-index: 2;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--bg-color);
+    padding: 0px 10px;
+}
+
+.branding {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.header img:hover {
+    cursor: pointer;
+}
+
+.header .ledium {
+    overflow: visible;
+}
+
+.hamburger {
+    width: fit-content;
+}
+
+.header > .content > .column {
+    height: 100%;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 10px;
+}
+
+#home-link {
+    height: 2em;
+}
+
+#text-home-link:hover {
+    cursor: pointer;
+}
+
+#discord {
+    height: 25px;
+    filter: drop-shadow(0 0px 2px var(--secondary));
+}
+
+.header-actions {
+    padding: 20px;
+    height: 100%;
+    width: fit-content;
+    display: flex;
+    gap: 5px;
+}
+
+.header-button {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+}
+
+.dropdown {
+    justify-content: center;
+    border: 1px solid var(--light);
+    border-radius: 10px;
+    padding: 0.75em;
+    padding-bottom: 0.5em;
+    background-color: var(--bg-color);
+    height: fit-content;
+    width: fit-content;
+    gap: 5px;
+}
+
+.dropdown > .dropdown-options > button {
+    transition: all 0.3s ease;
+    width: 100%;
+    font-size: 0;
+}
+
+.dropdown:hover > .dropdown-options > button {
+    font-size: 1em;
+}
+
+.dropdown-options {
+    width: 100%;
+    gap: 5px;
+}
+
+button.hamburger {
+    height: 100%;
+    aspect-ratio: 1/1;
+    background: url('/icons/hamburger.png');
+    background-size: contain;
+    border: none;
+}
+
+.mobile-menu {
+    position: absolute;
+    width: 100vw;
+    left: 0;
+    top: 100%;
+    align-items: center;
+    gap: 5px;
+    padding: 20px;
+    height: 90vh;
+    background-color: var(--bg-color);
+}
+
+div.hamburger > button {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .header {
+        height: 6em;
+    }
+}
+
+@media (max-width: 767px) {
+    .header {
+        padding: 10px;
+    }
+
+    #home-link {
+        height: 50px;
+    }
+
+    .header > .content > .divider,
+    .header > .content > .column {
+        display: none;
+    }
+
+    .header > .content {
+        padding: 0;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .dropdown {
+        padding-bottom: 0.5em;
+        width: 100%;
+    }
+
+    .dropdown-options {
+        visibility: visible;
+        height: fit-content;
+        margin-top: 10px;
+    }
+}

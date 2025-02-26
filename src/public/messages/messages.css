@@ -1,0 +1,88 @@
+main {
+    padding: 10px;
+}
+
+.chats,
+.chat-window {
+    height: 100%;
+    border: 1px solid var(--light);
+    border-radius: 15px;
+    box-shadow: 0px 4px 20px var(--secondary);
+    padding: 20px;
+}
+
+.chats {
+    width: 30%;
+    gap: 15px;
+    align-items: center;
+}
+
+.chats-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.lists {
+    width: 100%;
+    align-items: center;
+    gap: 15px;
+}
+
+.list {
+    width: 100%;
+    align-items: center;
+    gap: 10px;
+}
+
+#team-number {
+    flex-grow: 1;
+}
+
+#chat {
+    flex-grow: 1;
+}
+
+#new-chat,
+.chats-header,
+.team {
+    width: 100%;
+}
+
+.buttons {
+    width: 100%;
+    gap: 10px;
+}
+
+.team {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    text-align: left;
+}
+
+@media (min-width: 768px) {
+    main {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .chats {
+        max-width: 375px;
+    }
+}
+
+@media (max-width: 767px) {
+    main {
+        gap: 10px;
+        justify-content: flex-start;
+        height: fit-content;
+    }
+
+    .chats {
+        width: 100%;
+        height: fit-content;
+    }
+}

@@ -1,0 +1,17 @@
+.team {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.team > div {
+    display: flex;
+    align-items: center;
+}
+
+.team > span {
+    color: var(--secondary);
+    text-shadow: 0 0 1em var(--secondary);
+    overflow: visible;
+}
