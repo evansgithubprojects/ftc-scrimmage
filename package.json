@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "nodemon --dev",
-    "prod": "npx tsx --env-file=.env src/server.js"
+    "prod": "npx tsx src/server.js"
   },
   "keywords": [],
   "author": "",
