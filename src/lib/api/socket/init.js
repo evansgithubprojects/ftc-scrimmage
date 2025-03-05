@@ -1,5 +1,5 @@
 import { Server } from 'socket.io'
-import { sessionMiddleware } from '../../../server.js'
+import { sessionMiddleware } from 'lib/session'
 
 let io
 

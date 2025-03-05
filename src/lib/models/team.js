@@ -142,6 +142,11 @@ export default mongoose.model('Team', new mongoose.Schema({
         },
         async getTotd() {
             return await this.findOne({ totd: true })
+        },
+        async updateOPRsGlobally() {
+            await Promise.all((await this.find()).map(async team => {
+                await team.updateOPR()
+            }))
         }
     }
 }))

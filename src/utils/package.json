@@ -15,7 +15,9 @@
     "./movToMp4": "./movToMp4.js",
     "./buckets": "./buckets.js",
     "./getTeamName": "./getTeamName.js",
-    "./updateLeaderboards": "./updateLeaderboards.js"
+    "./updateLeaderboards": "./updateLeaderboards.js",
+    "./dbConnection": "./dbConnection.js",
+    "./updateLoop": "./updateLoop.js"
   },
   "author": "",
   "license": "ISC",

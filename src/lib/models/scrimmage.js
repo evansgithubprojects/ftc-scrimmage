@@ -106,6 +106,12 @@ const model = mongoose.model('Scrimmage', new mongoose.Schema({
         },
         async getScrimmagesPlayed(teamNumber) {
             return await this.find({ participants: teamNumber, date: { $lt: new Date() } })
+        },
+        async updateRankingsGlobally() {
+            await Promise.all((await this.find()).map(async scrimmage => {
+                if (scrimmage.date.getTime() < Date.now()) return
+                await scrimmage.updateRankings()
+            }))
         }
     }
 }))

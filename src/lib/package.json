@@ -9,7 +9,8 @@
     "./auth": "./auth/index.js",
     "./email": "./email/index.js",
     "./discord": "./discord/index.js",
-    "./models": "./models/index.js"
+    "./models": "./models/index.js",
+    "./session": "./session/index.js"
   },
   "author": "",
   "license": "ISC",
