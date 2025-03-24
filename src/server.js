@@ -8,6 +8,7 @@ import updateLeaderboards from 'custom-utils/updateLeaderboards'
 import { fileURLToPath } from 'url'
 import initSessions from 'lib/session'
 import initDB from 'custom-utils/dbConnection'
+import stats from 'custom-utils/stats'
 
 const __dirname = path.join(fileURLToPath(import.meta.url), '../')
 
@@ -29,6 +30,7 @@ initDB().then(async () => {
     await Team.updateOPRsGlobally()
     await Scrimmage.updateRankingsGlobally()
     updateLeaderboards()
+    stats.startUpdateLoop()
     
     server.listen(PORT, () => {
         console.log(`Server is running on port ${PORT}`);

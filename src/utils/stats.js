@@ -23,12 +23,16 @@ const getNumParticipants = async () => {
 let stats = {}
 
 export default {
-    async update() {
-        stats.numScrimmages = await Scrimmage.countDocuments()
-        stats.numParticipants =  await getNumParticipants()
-        stats.numTeamsRegistered = await Team.countDocuments()
-        stats.numTeams = (await ftcRoutes.seasonSummary()).teamCount
-        stats.numMedia = await mongoose.connection.db.collection('galleries.files').countDocuments()
+    async startUpdateLoop() {
+        async function update() {
+            stats.numScrimmages = await Scrimmage.countDocuments()
+            stats.numParticipants =  await getNumParticipants()
+            stats.numTeamsRegistered = await Team.countDocuments()
+            stats.numTeams = (await ftcRoutes.seasonSummary()).teamCount
+            stats.numMedia = await mongoose.connection.db.collection('galleries.files').countDocuments()
+        }
+        update()
+        setInterval(update, 15 * 60 * 1000)
     },
     get() {
         return stats
